@@ -39,7 +39,9 @@ dependencies:
       path: plugins/window_size
       ref: 5b3b930
   process_run: ^0.11.0+2
-  
+  provider: ^4.3.2+2
+  flustars: ^0.3.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -86,3 +88,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
       - assets/images/
+      - assets/file/
