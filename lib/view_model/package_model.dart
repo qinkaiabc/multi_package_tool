@@ -34,7 +34,7 @@ class PackageModel with ChangeNotifier {
     utf8.decoder.bind(stderrCtl.stream).transform(const LineSplitter()).listen((text) {
       _addLine(ErrLine(text));
     });
-    shell = Shell(stdout: stdoutCtl.sink, stderr: stderrCtl.sink);
+    shell = Shell(stdout: stdoutCtl.sink, stderr: stderrCtl.sink, verbose: false);
   }
 
   void apkFileChoose() async {
@@ -87,6 +87,16 @@ class PackageModel with ChangeNotifier {
       return;
     }
     await shell.run('java -jar $toolPath batch -f $channelFilePath $apkFilePath $outputPath');
+  }
+
+  void showChannelCommand() async {
+    FileChooserResult result = await showOpenPanel(allowsMultipleSelection: false);
+    if (result != null) {
+      String apkFile = result.paths?.first;
+      if (ObjectUtil.isNotEmpty(apkFile)) {
+        await shell.run('java -jar $toolPath show $apkFile');
+      }
+    }
   }
 
   @override

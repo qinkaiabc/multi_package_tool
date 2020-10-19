@@ -123,16 +123,30 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),*/
-                  Center(
-                    child: InkWell(
-                      onTap: () => packageModel.runCommand(),
-                      child: Container(
-                        margin: EdgeInsets.only(top: 10),
-                        padding: EdgeInsets.only(left: 8, right: 8),
-                        decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.white)),
-                        child: Text('开始打包', style: TextStyle(fontSize: 20, color: Colors.white)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () => packageModel.runCommand(),
+                        child: Container(
+                          margin: EdgeInsets.only(top: 10),
+                          padding: EdgeInsets.only(left: 8, right: 8),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.white)),
+                          child: Text('开始打包', style: TextStyle(fontSize: 20, color: Colors.white)),
+                        ),
                       ),
-                    ),
+                      SizedBox(width: 20),
+                      InkWell(
+                        onTap: () => packageModel.showChannelCommand(),
+                        child: Container(
+                          margin: EdgeInsets.only(top: 10),
+                          padding: EdgeInsets.only(left: 8, right: 8),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.white)),
+                          child: Text('验证Apk渠道名', style: TextStyle(fontSize: 20, color: Colors.white)),
+                        ),
+                      )
+                    ],
                   ),
                   SizedBox(height: 10),
                   Expanded(
