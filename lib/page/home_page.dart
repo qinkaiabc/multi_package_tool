@@ -1,9 +1,9 @@
 import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mult_package_tool/model/Line.dart';
-import 'package:mult_package_tool/provider/provider_widget.dart';
-import 'package:mult_package_tool/view_model/package_model.dart';
+import 'package:multi_package_tool/model/Line.dart';
+import 'package:multi_package_tool/provider/provider_widget.dart';
+import 'package:multi_package_tool/view_model/package_model.dart';
 
 import '../util/image_utils.dart';
 

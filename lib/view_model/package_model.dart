@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:file_chooser/file_chooser.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
-import 'package:mult_package_tool/model/Line.dart';
+import 'package:multi_package_tool/model/Line.dart';
 import 'package:process_run/shell.dart';
 
 class PackageModel with ChangeNotifier {
