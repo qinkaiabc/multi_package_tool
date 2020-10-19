@@ -8,7 +8,8 @@ import 'package:mult_package_tool/model/Line.dart';
 import 'package:process_run/shell.dart';
 
 class PackageModel with ChangeNotifier {
-  String apkFilePath, channelFilePath, outputPath, toolPath;
+  String apkFilePath, channelFilePath, outputPath;
+  String toolPath = '/Applications/mult_package_tool.app/Contents/Frameworks/App.framework/Versions/A/Resources/flutter_assets/assets/file/walle-cli-all.jar';
   Shell shell;
   ScrollController controller = ScrollController();
   final stdoutCtl = StreamController<List<int>>();
@@ -77,10 +78,10 @@ class PackageModel with ChangeNotifier {
       _addLine(ErrLine('请选择渠道文件'));
       return;
     }
-    if (ObjectUtil.isEmpty(toolPath)) {
+    /*if (ObjectUtil.isEmpty(toolPath)) {
       _addLine(ErrLine('请选择打包工具文件'));
       return;
-    }
+    }*/
     if (ObjectUtil.isEmpty(outputPath)) {
       _addLine(ErrLine('请选择输出目录'));
       return;

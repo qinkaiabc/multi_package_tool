@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
-                  Container(
+                  /*Container(
                     padding: EdgeInsets.only(left: 10, right: 10),
                     child: Row(
                       children: [
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                  ),
+                  ),*/
                   Center(
                     child: InkWell(
                       onTap: () => packageModel.runCommand(),
