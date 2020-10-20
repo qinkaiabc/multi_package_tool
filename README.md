@@ -1,6 +1,8 @@
-# mult_package_tool
+# 基于美团walle的Flutter版多渠道打包桌面工具
 
-A new Flutter project.
+为适配Android11需要升级使用Android Signature V2 Scheme签名，同时需要打多个渠道包，为方便团队成员生成多渠道包，制作了基于美团walle java命令行打包的桌面工具，该桌面工具使用Flutter编写PC端。
+
+[演示地址](https://www.bilibili.com/video/BV1GT4y1F7Dt/)
 
 ## Getting Started
 
